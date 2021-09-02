@@ -157,6 +157,8 @@ backtest_tcn = tcn_model.historical_forecasts(
     retrain=False,
     verbose=True
 )
+
+# Visualize
 plt.figure(figsize=(20,10))
 plt.title('TCN Model - NFLX Closing Price Prediction')
 plt.xlabel('Date', fontsize = 10)
@@ -173,5 +175,6 @@ tickerSeries2[2100:].plot(label='Validations')
 backtest_tcn.plot(label='Predictions')
 plt.legend(fontsize=24, loc='best')
 
+# Backtesting data
 backtest_tcn
 
